@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: 'Public Sans', sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'FS Dillon', sans-serif;
+}
+
+ .apfel-heading {
+  font-family: apfelgrotezk, sans-serif;
+ }
+
+ .apfel-subheading {
+  font-family: apfelgrotezk, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 30px !important;
+ }
+
+ .apfel-subheading-28 {
+  font-family: apfelgrotezk, sans-serif !important;
+  font-size: 28px !important;
+  line-height: 36px !important;
+ }
+
+ .home-body p,
+ .home-body li {
+  font-family: apfelgrotezk, sans-serif !important;
+  font-size: 20px !important;
+  line-height: 30px !important;
+ }
+
+ .headline-font {
+  font-family: 'Sora', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+ }
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+
+  20% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-100%);
+  }
+
+  40% {
+    transform: translateX(-100%);
+  }
+
+  45% {
+    transform: translateX(-200%);
+  }
+
+  60% {
+    transform: translateX(-200%);
+  }
+
+  65% {
+    transform: translateX(-300%);
+  }
+
+  80% {
+    transform: translateX(-300%);
+  }
+
+  85% {
+    transform: translateX(-400%);
+  }
+
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+.animate-slider {
+  animation: slider 20s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: calc(200%);
+  animation: marquee 120s linear infinite;
+}
+
+
+
+/* for top jobs, sponsored */
+
+/* =========================
+   Common Card Scroll
+   ========================= */
+.common-card-scroll {
+  overflow-x: auto;
+  /* Enable horizontal scroll */
+  scroll-behavior: smooth;
+  /* Smooth scroll on swipe or mouse */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scroll for iOS */
+  padding: 1rem 0;
+  width: 100%;
+}
+
+/* Hide scrollbars */
+.common-card-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.common-card-scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Track container inside the scroll wrapper */
+.common-card-scroll .scroll-track {
+  /* Keep cards in a row */
+  gap: 1rem;
+  /* Space between cards */
+  width: max-content;
+  /* Make the track fit all cards */
+}
+
+/* Card inside the scroll track */
+.common-card-scroll .card {
+  flex-shrink: 0;
+  /* Prevent shrinking */
+  background: white;
+  /* Default background */
+  border-radius: 0.5rem;
+  /* Rounded corners */
+  padding: 1rem;
+  /* Default padding */
+  border: 1px solid #e5e7eb;
+  /* Default border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.common-card-scroll .card:hover {
+  transform: scale(1.03);
+  /* Slight hover effect */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: image inside cards */
+.common-card-scroll .card img {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.common-card-scroll .card img:hover {
+  transform: scale(1.1);
+}
+
+/* Flex container for inner content like logos */
+.common-card-scroll .flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+
+
+/*  jobsearch styles  */
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.hexagon {
+  clip-path: polygon(25% 6.7%,
+      75% 6.7%,
+      100% 50%,
+      75% 93.3%,
+      25% 93.3%,
+      0% 50%);
+}
+
+
+
+.clip-path-slant {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+
+/* Professional Purple Scrollbar */
+.purple-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(172, 140, 236) transparent;
+}
+
+.purple-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.purple-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.purple-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.budget-range-slider [data-slot="slider-track"] {
+  background-color: #eef2ff;
+  height: 6px;
+}
+
+.budget-range-slider [data-slot="slider-range"] {
+  background: linear-gradient(90deg, rgb(122, 107, 235) 0%, rgb(172, 140, 236) 100%);
+}
+
+.budget-range-slider [data-slot="slider-thumb"] {
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 2px solid rgb(122, 107, 235);
+  box-shadow: 0 10px 18px rgba(122, 107, 235, 0.18);
+}
+
+.budget-range-slider [data-slot="slider-thumb"]:focus-visible {
+  box-shadow: 0 0 0 6px rgba(122, 107, 235, 0.18), 0 10px 18px rgba(122, 107, 235, 0.18);
+}
+
+.find-projects-budget-range-slider [data-slot="slider-track"] {
+  background-color: #f1f5ff;
+  height: 8px;
+}
+
+.find-projects-budget-range-slider [data-slot="slider-range"] {
+  background: linear-gradient(90deg, #a855f7 0%, #7c3aed 50%, #4f46e5 100%);
+}
+
+.find-projects-budget-range-slider [data-slot="slider-thumb"] {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #ffffff 0%, #ffffff 55%, rgba(124, 58, 237, 0.12) 100%);
+  border: 2px solid #7c3aed;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.18);
+}
+
+.find-projects-budget-range-slider [data-slot="slider-thumb"]:focus-visible {
+  box-shadow: 0 0 0 6px rgba(124, 58, 237, 0.18), 0 12px 24px rgba(79, 70, 229, 0.18);
+}
+
+/* Footer – 20px headings, 14px body on desktop (About page and all pages using shared Footer) */
+@media (min-width: 1024px) {
+  .site-footer .footer-heading {
+    font-size: 20px !important;
+  }
+  .site-footer .footer-body,
+  .site-footer .footer-body li,
+  .site-footer .footer-body a {
+    font-size: 14px !important;
+  }
+}
