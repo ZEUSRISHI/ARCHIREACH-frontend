@@ -1206,7 +1206,7 @@ const BlogPage = () => {
         </div>
       </div>
     </div>
-  );
+  );  
 };
 
 export default BlogPage;

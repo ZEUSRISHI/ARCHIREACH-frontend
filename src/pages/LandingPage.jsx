@@ -813,7 +813,7 @@ function LandingPage() {
     }
   ]
 
-  return (
+return (
     <div className="bg-[rgba(122,107,235,0.1)] pt-4">
       <div className="overflow-x-hidden bg-[#ECEBFB]">
         <NavbarAll />
@@ -844,9 +844,8 @@ function LandingPage() {
           <div className="pointer-events-none absolute -top-28 -left-24 h-80 w-80 rounded-full bg-[rgb(122,107,235)]/10 blur-3xl opacity-0" />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 
-            {/* ================= MOBILE HERO ================= */}
+            {/* MOBILE HERO */}
             <div className="block lg:hidden">
-              {/* Image */}
               <div className="flex justify-center pt-6 pb-4 px-4">
                 <div className="quibo-home-hero-hover group relative w-fit transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.02]">
                   <img
@@ -857,26 +856,20 @@ function LandingPage() {
                   />
                 </div>
               </div>
-
-              {/* Text */}
               <div className="text-center px-4">
-                <Reveal as="h1" delay={0} className="font-semibold text-[32px] sm:text-[40px] leading-tight text-[#0B0D14] tracking-tight">
+                <Reveal as="h1" delay={0} className="font-semibold text-[28px] sm:text-[36px] leading-tight text-[#0B0D14] tracking-tight">
                   Clients Connect with <br />
                   <span className="text-[rgb(102,91,215)]">Verified Architects & Interior Designers</span>
                 </Reveal>
-
-                <p className="mt-4 text-[16px] leading-[26px] font-normal text-[#111729]">
-                  A simple way for clients to discover architects <br />
-                  and for architects to find new projects — all in one place. <br />
+                <p className="mt-4 text-[15px] leading-[26px] font-normal text-[#444]">
+                  A simple way for clients to discover architects
+                  and for architects to find new projects — all in one place.
                   Discover new opportunities, showcase your work, and be part of a global architectural community.
                 </p>
-
                 <div className="mt-6">
                   <button
                     onClick={() => navigate('/signup')}
-                    className="bg-[rgb(122,107,235)] hover:opacity-90
-                       text-white font-bold w-full sm:w-[170px] h-[50px]
-                       rounded-[12px] shadow-lg transition"
+                    className="bg-[rgb(122,107,235)] hover:opacity-90 text-white font-bold w-full sm:w-[170px] h-[50px] rounded-[12px] shadow-lg transition"
                   >
                     Get Started
                   </button>
@@ -884,36 +877,28 @@ function LandingPage() {
               </div>
             </div>
 
-            {/* ================= DESKTOP HERO ================= */}
+            {/* DESKTOP HERO */}
             <div className="hidden lg:block">
               <div className="flex items-center justify-between gap-10">
-
-                {/* Left Content */}
                 <div className="flex-1 max-w-3xl">
                   <Reveal as="h1" delay={0} className="font-semibold text-[40px] leading-tight text-[#0F172A] tracking-tight">
                     Where Clients Connect with <br />
                     <span className="text-[rgb(102,91,215)]">Verified Architects & <br /> Interior Designers</span>
                   </Reveal>
-
-                  <p className="mt-6 text-lg leading-relaxed text-[#111729] max-w-2xl ">
-                    A simple way for clients to discover architects and for <br />
-                    architects to find new projects — all in one place. Discover new <br />
+                  <p className="mt-6 text-lg leading-relaxed text-[#444] max-w-2xl">
+                    A simple way for clients to discover architects and for
+                    architects to find new projects — all in one place. Discover new
                     opportunities, showcase your work, and be part of a global architectural community.
                   </p>
-
                   <div className="mt-8">
                     <button
                       onClick={() => navigate('/signup')}
-                      className="bg-[rgb(122,107,235)] hover:opacity-90
-                         text-white font-bold w-[180px] h-[54px]
-                         rounded-[14px] shadow-xl transition"
+                      className="bg-[rgb(122,107,235)] hover:opacity-90 text-white font-bold w-[180px] h-[54px] rounded-[14px] shadow-xl transition"
                     >
                       Get Started
                     </button>
                   </div>
                 </div>
-
-                {/* Right Image */}
                 <div className="relative flex items-center justify-center flex-shrink-0 w-full max-w-[460px]">
                   <div className="quibo-home-hero-hover group relative w-fit transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:scale-[1.02]">
                     <img
@@ -930,7 +915,7 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Our Accreditations & Partnerships */}
+        {/* Partnerships */}
         <PartnershipsSlider />
       </div>
 
@@ -938,25 +923,29 @@ function LandingPage() {
       <section className="relative py-10 sm:py-12 lg:py-16 bg-[linear-gradient(to_bottom,rgba(122,107,235,0.02)_0%,#fff_260px)]">
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 sm:h-20 bg-gradient-to-b from-transparent via-[rgba(122,107,235,0.03)] to-[rgba(122,107,235,0.08)]" />
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Toggle */}
           <div className="flex justify-center mb-6">
             <div className="bg-gray-100 p-1 rounded-xl inline-flex shadow-inner">
               <button
                 type="button"
                 onClick={() => setSearchTarget('architects')}
-                className={`px-8 py-2.5 rounded-lg text-sm transition-all duration-300 ${searchTarget === 'architects'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md font-bold'
-                  : 'text-gray-500 hover:text-gray-700 font-semibold'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm transition-all duration-300 ${
+                  searchTarget === 'architects'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md font-bold'
+                    : 'text-gray-500 hover:text-gray-700 font-semibold'
+                }`}
               >
                 Find Architects
               </button>
               <button
                 type="button"
                 onClick={() => setSearchTarget('projects')}
-                className={`px-8 py-2.5 rounded-lg text-sm transition-all duration-300 ${searchTarget === 'projects'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md font-bold'
-                  : 'text-gray-500 hover:text-gray-700 font-semibold'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm transition-all duration-300 ${
+                  searchTarget === 'projects'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md font-bold'
+                    : 'text-gray-500 hover:text-gray-700 font-semibold'
+                }`}
               >
                 Find Projects
               </button>
@@ -964,12 +953,15 @@ function LandingPage() {
           </div>
 
           {/* Header */}
-          <div className="text-center mb-10 sm:mb-12">
-            <Reveal as="h2" delay={60} className="text-[32px] sm:text-[40px] font-semibold text-gray-900 mb-4 leading-tight">
-              Find <span className="text-[rgb(122,107,235)]">Verified</span> Architects & Interior Designers
+          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+            <Reveal
+              as="h2"
+              delay={60}
+              className="text-[28px] sm:text-[36px] lg:text-[40px] font-semibold text-gray-900 mb-3 leading-tight"
+            >
+              Find <span className="text-[rgb(122,107,235)]">Verified</span> Architects &amp; Interior Designers
             </Reveal>
-
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto px-4 font-normal sm:whitespace-nowrap">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2 font-normal">
               {searchTarget === 'projects'
                 ? 'Access real project briefs from clients actively looking for architects and interior designers.'
                 : 'Connect with licensed professionals who match your project, budget, and style.'}
@@ -978,206 +970,193 @@ function LandingPage() {
 
           {/* Search Form */}
           <div className="max-w-4xl mx-auto mb-10 sm:mb-12">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch">
+            <div className="bg-white rounded-2xl shadow-md border border-purple-100 p-2 flex flex-col sm:flex-row gap-2 items-stretch">
               {searchTarget === 'projects' ? (
                 <>
-                  {/* Project Type */}
                   <div className="flex-1 relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <Building className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Project Type"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
-
-                  {/* Location */}
+                  <div className="hidden sm:block w-px bg-gray-100 self-stretch my-1" />
                   <div className="flex-1 relative">
-                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Location"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
-
-                  {/* Budget Range */}
+                  <div className="hidden sm:block w-px bg-gray-100 self-stretch my-1" />
                   <div className="flex-1 relative">
-                    <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Budget Range"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
-
-                  {/* Timeline */}
+                  <div className="hidden sm:block w-px bg-gray-100 self-stretch my-1" />
                   <div className="flex-1 relative">
-                    <ClockIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <ClockIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Timeline"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
                 </>
               ) : (
                 <>
-                  {/* Location */}
                   <div className="flex-1 relative">
-                    <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Location"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
-
-                  {/* Project Type */}
+                  <div className="hidden sm:block w-px bg-gray-100 self-stretch my-1" />
                   <div className="flex-1 relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <Building className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Project Type"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
-
-                  {/* Budget Range */}
+                  <div className="hidden sm:block w-px bg-gray-100 self-stretch my-1" />
                   <div className="flex-1 relative">
-                    <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[rgb(122,107,235)] w-5 h-5" />
+                    <DollarSign className="absolute left-3 top-1/2 -translate-y-1/2 text-[rgb(122,107,235)] w-4 h-4 sm:w-5 sm:h-5" />
                     <input
                       type="text"
                       placeholder="Budget Range"
-                      className="w-full pl-10 pr-4 py-3 sm:py-4 bg-transparent border-0 rounded-none text-gray-700 text-base focus:outline-none"
+                      className="w-full pl-9 sm:pl-10 pr-3 py-3 text-gray-700 text-sm sm:text-base focus:outline-none bg-transparent"
                     />
                   </div>
                 </>
               )}
-
               <button
                 type="button"
-                onClick={() => navigate(searchTarget === 'architects' ? '/pages/ExploreDrop/FindArch' : '/pages/ExploreDrop/FindProjects')}
-                className="bg-[rgb(122,107,235)] hover:bg-[rgb(122,107,235)/90] text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg transition-colors font-bold flex items-center justify-center gap-2 w-full sm:w-[190px] whitespace-nowrap shadow-md hover:shadow-lg"
+                onClick={() =>
+                  navigate(
+                    searchTarget === 'architects'
+                      ? '/pages/ExploreDrop/FindArch'
+                      : '/pages/ExploreDrop/FindProjects'
+                  )
+                }
+                className="bg-[rgb(122,107,235)] hover:opacity-90 text-white px-5 py-3 rounded-xl transition font-bold flex items-center justify-center gap-2 w-full sm:w-auto whitespace-nowrap shadow-sm text-sm sm:text-base"
               >
-                <Search className="w-5 h-5" />
-                <span className="sm:inline">{searchTarget === 'architects' ? 'Find Architects' : 'Find Projects'}</span>
+                <Search className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>{searchTarget === 'architects' ? 'Find Architects' : 'Find Projects'}</span>
               </button>
             </div>
           </div>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 max-w-5xl mx-auto">
-            {/* Discover Card */}
-            <div className="flex items-start gap-4 sm:gap-6">
-              <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-1 flex-shrink-0" />
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 lg:gap-10 max-w-5xl mx-auto">
+
+            {/* Discover */}
+            <div className="flex items-start gap-4 bg-white/60 sm:bg-transparent rounded-xl sm:rounded-none p-4 sm:p-0 border border-purple-100/70 sm:border-0 shadow-sm sm:shadow-none">
+              <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-0.5 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-2 uppercase">DISCOVER</h3>
-                <p className="text-gray-700 leading-relaxed text-sm font-medium">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1.5 uppercase tracking-widest">
+                  Discover
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {searchTarget === 'projects'
-                    ? 'Browse active project briefs posted by verified clients. Explore opportunities across residential, commercial, institutional, and interior projects—filtered by location, budget, and scope.'
-                    : <>
-                      Browse architects and interior designers verified by
-                      licensed registration and professional credentials. Filter by
-                      specialization, years of experience, project types, and
-                      service areas.
-                    </>}
+                    ? 'Browse active project briefs posted by verified clients. Explore opportunities across residential, commercial, institutional, and interior projects — filtered by location, budget, and scope.'
+                    : 'Browse architects and interior designers verified by licensed registration and professional credentials. Filter by specialization, years of experience, project types, and service areas.'}
                 </p>
               </div>
             </div>
 
-            {/* Compare Card */}
-            <div className="flex items-start gap-4 sm:gap-6">
-              <ChartPie className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-1 flex-shrink-0" />
+            {/* Compare / Evaluate */}
+            <div className="flex items-start gap-4 bg-white/60 sm:bg-transparent rounded-xl sm:rounded-none p-4 sm:p-0 border border-purple-100/70 sm:border-0 shadow-sm sm:shadow-none">
+              <ChartPie className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-0.5 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-2 uppercase">{searchTarget === 'projects' ? 'EVALUATE' : 'COMPARE'}</h3>
-                <p className="text-gray-700 leading-relaxed text-sm font-medium">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1.5 uppercase tracking-widest">
+                  {searchTarget === 'projects' ? 'Evaluate' : 'Compare'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {searchTarget === 'projects'
                     ? 'Review detailed project requirements, timelines, and client expectations before applying. Assess whether a project aligns with your expertise, availability, and business goals.'
-                    : <>
-                      Review detailed portfolios showing completed projects,
-                      client reviews, and professional credentials. Compare
-                      architects’ to find the best fit for your project scope and budget.
-                    </>}
+                    : 'Review detailed portfolios showing completed projects, client reviews, and professional credentials. Compare architects to find the best fit for your project scope and budget.'}
                 </p>
               </div>
             </div>
 
-            {/* Connect Card */}
-            <div className="flex items-start gap-4 sm:gap-6">
-              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-1 flex-shrink-0" />
+            {/* Connect / Apply */}
+            <div className="flex items-start gap-4 bg-white/60 sm:bg-transparent rounded-xl sm:rounded-none p-4 sm:p-0 border border-purple-100/70 sm:border-0 shadow-sm sm:shadow-none">
+              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-[rgb(122,107,235)] mt-0.5 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-lg sm:text-xl font-normal text-gray-900 mb-2 uppercase">{searchTarget === 'projects' ? 'APPLY & CONNECT' : 'CONNECT'}</h3>
-                <p className="text-gray-700 leading-relaxed text-sm font-medium">
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1.5 uppercase tracking-widest">
+                  {searchTarget === 'projects' ? 'Apply & Connect' : 'Connect'}
+                </h3>
+                <p className="text-gray-600 leading-relaxed text-sm">
                   {searchTarget === 'projects'
                     ? 'Submit your interest directly through Archireach. Connect with clients once shortlisted, with your professional profile, portfolio, and credentials working in your favor.'
-                    : <>
-                      Once you find the right professional, request a quote or proposal directly through Archireach. Your contact details
-                      stay protected until both parties are ready to connect.
-                    </>}
+                    : 'Once you find the right professional, request a quote or proposal directly through Archireach. Your contact details stay protected until both parties are ready to connect.'}
                 </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Verification Section */}
-      <div className='bg-[rgba(122,107,235,0.1)] py-16 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          {/* Header Section */}
-          <div className='text-center mb-16'>
-            <h1 className='text-4xl sm:text-5xl font-extrabold mb-4 '>
-              <span className='text-black'>Trusted</span>{' '}
-              <span className='text-[rgb(122,107,235)]'>Verification Process</span>
+      <div className="bg-[rgba(122,107,235,0.1)] py-12 sm:py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+              <span className="text-black">Trusted</span>{' '}
+              <span className="text-[rgb(122,107,235)]">Verification Process</span>
             </h1>
-
-            <p className='text-black/80 max-w-2xl mx-auto font-semibold'>
+            <p className="text-gray-600 max-w-2xl mx-auto font-medium text-sm sm:text-base">
               Every architect and interior designer firm on Archireach is professionally licensed and credential-verified. No fakes. No spam. Only authentic professionals.
             </p>
           </div>
-
-          {/* Cards Section */}
-
-          <div className="flex flex-col md:flex-row gap-8 items-stretch">
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 items-stretch">
             <ArchitectCard />
             <FirmCard />
           </div>
-
         </div>
-        {/* Three Steps Section */}
 
         {/* Three Steps Section */}
-        <div className="max-w-5xl mx-auto py-16 px-4">
-
-          {/* Heading */}
-          <div className="max-w-6xl mx-auto text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+        <div className="max-w-5xl mx-auto py-12 sm:py-16 px-4">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-3">
               Three Simple Steps to Your Next Project
             </h2>
-            <p className="text-black/70 mt-2 text-lg">
+            <p className="text-gray-600 text-base sm:text-lg">
               Getting started with Archireach is quick and straightforward.
             </p>
           </div>
 
           {/* Category Switcher */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-10 sm:mb-12">
             <div className="bg-gray-100 p-1 rounded-xl inline-flex shadow-inner">
               <button
                 onClick={() => setActiveStepCategory('professional')}
-                className={`px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${activeStepCategory === 'professional'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md'
-                  : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${
+                  activeStepCategory === 'professional'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
               >
                 For Professionals
               </button>
               <button
                 onClick={() => setActiveStepCategory('client')}
-                className={`px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${activeStepCategory === 'client'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md'
-                  : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${
+                  activeStepCategory === 'client'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
               >
                 For Clients
               </button>
@@ -1185,55 +1164,52 @@ function LandingPage() {
           </div>
 
           {/* Steps Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
             {activeStepCategory === 'professional' ? (
               <>
-                {/* Pro Step 1 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     01
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    CREATE YOUR PROFILE
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Create Your Profile
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Set up your professional profile to showcase your skills, experience, and completed projects. Verify your credentials and build your reputation on the platform.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-sm font-bold px-4 py-1.5 rounded-full">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full">
                     <ClockIcon className="w-4 h-4 mr-2" />
                     24–48 hours (to verify)
                   </div>
                 </div>
 
-                {/* Pro Step 2 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     02
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    FIND QUALIFIED LEADS
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Find Qualified Leads
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Browse verified project briefs from serious clients actively looking for professionals like you. Filter by budget, project type, location, and complexity.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-green-50 text-green-700 text-sm font-bold px-4 py-1.5 rounded-full border border-green-100">
+                  <div className="mt-auto inline-flex items-center bg-green-50 text-green-700 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-green-100">
                     <CheckCircleIcon className="w-4 h-4 mr-2" />
                     Real budgets, verified clients
                   </div>
                 </div>
 
-                {/* Pro Step 3 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     03
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    SECURE THE PROJECT
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Secure the Project
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Propose your expertise directly to clients, negotiate terms, and finalize agreements through the platform. Start working with confidence and build your portfolio.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
                     <Zap className="w-4 h-4 mr-2" />
                     Go Live Today
                   </div>
@@ -1241,52 +1217,49 @@ function LandingPage() {
               </>
             ) : (
               <>
-                {/* Client Step 1 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     01
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    POST YOUR PROJECT BRIEF
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Post Your Project Brief
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Describe your project—what you need, budget, and timeline. Provide detail so architects can understand your vision and submit relevant proposals.
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                    Describe your project — what you need, budget, and timeline. Provide detail so architects can understand your vision and submit relevant proposals.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-sm font-bold px-4 py-1.5 rounded-full">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full">
                     <ClockIcon className="w-4 h-4 mr-2" />
                     10 minutes to post
                   </div>
                 </div>
 
-                {/* Client Step 2 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     02
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    BROWSE ARCHITECT RESPONSES
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Browse Architect Responses
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Licensed architects submit proposals. View their credentials, completed projects, and reviews. Compare professionals to find your perfect match.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-blue-50 text-blue-700 text-sm font-bold px-4 py-1.5 rounded-full border border-blue-100">
+                  <div className="mt-auto inline-flex items-center bg-blue-50 text-blue-700 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-blue-100">
                     <Zap className="w-4 h-4 mr-2" />
                     Responses within 24 hours
                   </div>
                 </div>
 
-                {/* Client Step 3 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     03
                   </div>
-                  <h3 className="text-xl font-bold mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    HIRE & BEGIN YOUR PROJECT
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Hire & Begin Your Project
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Select your architect, finalize agreements through Archireach, and start with confidence. All communication happens on-platform for your protection.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
                     <Lock className="w-4 h-4 mr-2" />
                     Secure & Protected
                   </div>
@@ -1295,96 +1268,91 @@ function LandingPage() {
             )}
           </div>
         </div>
-
       </div>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <Reveal as="h2" delay={60} className="text-[32px] sm:text-[40px] font-semibold text-gray-900 mb-4 leading-tight">
+          <div className="text-center mb-10 sm:mb-12">
+            <Reveal as="h2" delay={60} className="text-[28px] sm:text-[36px] lg:text-[40px] font-semibold text-gray-900 mb-3 leading-tight">
               How <span className="text-[rgb(122,107,235)]">It Works</span>
             </Reveal>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
               Get started in three simple steps, whether you're looking to hire or seeking opportunities.
             </p>
           </div>
 
-          {/* Toggle Buttons */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-10 sm:mb-12">
             <div className="bg-gray-100 p-1 rounded-xl inline-flex shadow-inner">
               <button
                 onClick={() => setActiveStepCategory('professional')}
-                className={`px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${activeStepCategory === 'professional'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md'
-                  : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${
+                  activeStepCategory === 'professional'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
               >
                 For Professionals
               </button>
               <button
                 onClick={() => setActiveStepCategory('client')}
-                className={`px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${activeStepCategory === 'client'
-                  ? 'bg-white text-[rgb(122,107,235)] shadow-md'
-                  : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                className={`px-6 sm:px-8 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${
+                  activeStepCategory === 'client'
+                    ? 'bg-white text-[rgb(122,107,235)] shadow-md'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
               >
                 For Clients
               </button>
             </div>
           </div>
 
-          {/* Steps Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6">
             {activeStepCategory === 'professional' ? (
               <>
-                {/* Pro Step 1 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     01
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    CREATE YOUR PROFILE
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Create Your Profile
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Set up your professional profile to showcase your skills, experience, and completed projects. Verify your credentials and build your reputation on the platform.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-sm font-bold px-4 py-1.5 rounded-full">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full">
                     <ClockIcon className="w-4 h-4 mr-2" />
                     24–48 hours (to verify)
                   </div>
                 </div>
 
-                {/* Pro Step 2 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     02
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    FIND QUALIFIED LEADS
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Find Qualified Leads
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Browse verified project briefs from serious clients actively looking for professionals like you. Filter by budget, project type, location, and complexity.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-green-50 text-green-700 text-sm font-bold px-4 py-1.5 rounded-full border border-green-100">
+                  <div className="mt-auto inline-flex items-center bg-green-50 text-green-700 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-green-100">
                     <CheckCircleIcon className="w-4 h-4 mr-2" />
                     Real budgets, verified clients
                   </div>
                 </div>
 
-                {/* Pro Step 3 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     03
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    SECURE THE PROJECT
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Secure the Project
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Propose your expertise directly to clients, negotiate terms, and finalize agreements through the platform. Start working with confidence and build your portfolio.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
                     <Zap className="w-4 h-4 mr-2" />
                     Go Live Today
                   </div>
@@ -1392,52 +1360,49 @@ function LandingPage() {
               </>
             ) : (
               <>
-                {/* Client Step 1 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     01
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    POST YOUR PROJECT BRIEF
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Post Your Project Brief
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    Describe your project—what you need, budget, and timeline. Provide detail so architects can understand your vision and submit relevant proposals.
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                    Describe your project — what you need, budget, and timeline. Provide detail so architects can understand your vision and submit relevant proposals.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-sm font-bold px-4 py-1.5 rounded-full">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)]/10 text-[rgb(122,107,235)] text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full">
                     <ClockIcon className="w-4 h-4 mr-2" />
                     10 minutes to post
                   </div>
                 </div>
 
-                {/* Client Step 2 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     02
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    BROWSE ARCHITECT RESPONSES
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Browse Architect Responses
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Licensed architects submit proposals. View their credentials, completed projects, and reviews. Compare professionals to find your perfect match.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-blue-50 text-blue-700 text-sm font-bold px-4 py-1.5 rounded-full border border-blue-100">
+                  <div className="mt-auto inline-flex items-center bg-blue-50 text-blue-700 text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full border border-blue-100">
                     <Zap className="w-4 h-4 mr-2" />
                     Responses within 24 hours
                   </div>
                 </div>
 
-                {/* Client Step 3 */}
-                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group">
+                <div className="bg-transparent border border-[rgb(122,107,235)]/40 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center relative group mt-7">
                   <div className="w-14 h-14 bg-white border-2 border-[rgb(122,107,235)] text-[rgb(122,107,235)] font-bold rounded-full flex items-center justify-center absolute -top-7 text-xl shadow-lg group-hover:scale-110 transition-transform">
                     03
                   </div>
-                  <h3 className="text-xl font-normal mt-6 mb-4 text-gray-900 uppercase tracking-tight">
-                    HIRE & BEGIN YOUR PROJECT
+                  <h3 className="text-base sm:text-lg font-bold mt-6 mb-3 text-gray-900 uppercase tracking-tight">
+                    Hire & Begin Your Project
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                     Select your architect, finalize agreements through Archireach, and start with confidence. All communication happens on-platform for your protection.
                   </p>
-                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
+                  <div className="mt-auto inline-flex items-center bg-[rgb(122,107,235)] text-white text-xs sm:text-sm font-bold px-4 py-1.5 rounded-full shadow-md">
                     <Lock className="w-4 h-4 mr-2" />
                     Secure & Protected
                   </div>
@@ -1448,34 +1413,30 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* featured projects */}
-
+      {/* Featured Projects */}
       <FeaturedProjects />
 
-
-      {/* Latest Articles Carousel */}
+      {/* Latest Articles */}
       <LatestArticlesCarousel articles={articles} />
 
-
-      <div className='bg-white py-6 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          {/* Header */}
-          <div className='relative mb-10'>
-            <div className='text-center'>
-              <Reveal as='h2' delay={60} className='text-3xl md:text-4xl font-semibold text-black mb-4'>
-                Trusted by <span className='text-[rgb(122,107,235)]'>1,000+ Architects Across India</span>
+      {/* Testimonials */}
+      <div className="bg-white py-6 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative mb-8 sm:mb-10">
+            <div className="text-center">
+              <Reveal as="h2" delay={60} className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black mb-3">
+                Trusted by <span className="text-[rgb(122,107,235)]">1,000+ Architects Across India</span>
               </Reveal>
-              <p className='text-black/70 max-w-2xl mx-auto'>
+              <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
                 Architects use Archireach to grow their practice, connect with verified clients, and find projects faster.
               </p>
             </div>
-
-            <div className='hidden md:flex items-center gap-3 absolute right-0 top-1/2 -translate-y-1/2'>
+            <div className="hidden md:flex items-center gap-3 absolute right-0 top-1/2 -translate-y-1/2">
               <button
                 type="button"
                 onClick={() => scrollTestimonials(-1)}
                 aria-label="Scroll testimonials left"
-                className='w-11 h-11 rounded-full bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-gray-50 transition'
+                className="w-11 h-11 rounded-full bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-gray-50 transition"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-black">
                   <path d="M15 18l-6-6 6-6" />
@@ -1485,7 +1446,7 @@ function LandingPage() {
                 type="button"
                 onClick={() => scrollTestimonials(1)}
                 aria-label="Scroll testimonials right"
-                className='w-11 h-11 rounded-full bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-gray-50 transition'
+                className="w-11 h-11 rounded-full bg-white border border-black/10 shadow-sm flex items-center justify-center hover:bg-gray-50 transition"
               >
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-black">
                   <path d="M9 18l6-6-6-6" />
@@ -1493,10 +1454,10 @@ function LandingPage() {
               </button>
             </div>
           </div>
-          {/* Testimonials Horizontal Scroll */}
-          <div ref={testimonialsScrollRef} className="overflow-x-auto flex space-x-6 px-4 py-8 scrollbar-hide scroll-smooth">
+
+          <div ref={testimonialsScrollRef} className="overflow-x-auto flex space-x-4 sm:space-x-6 px-2 sm:px-4 py-6 sm:py-8 scrollbar-hide scroll-smooth">
             {(dynamicTestimonials.length > 0 ? dynamicTestimonials : testimonials).map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 w-80 md:w-96">
+              <div key={index} className="flex-shrink-0 w-72 sm:w-80 md:w-96">
                 <TestimonialCard
                   rating={testimonial.rating}
                   testimonial={testimonial.comment || testimonial.testimonial}
@@ -1508,123 +1469,106 @@ function LandingPage() {
             ))}
           </div>
 
-
-
-
           {/* Metrics Grid */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center mt-5 justify-items-center max-w-5xl mx-auto'>
-            {/* Card 1 */}
-            <div className='bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]'>
-              <h3 className='text-3xl font-normal mb-0.5'>1,000+</h3>
-              <p className='text-xs opacity-90'>Verified Architects</p>
-              <p className='text-[11px] mt-0.5 opacity-70'>Joined in the last 2 weeks</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center mt-5 justify-items-center max-w-5xl mx-auto">
+            <div className="bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-3 sm:px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-0.5">1,000+</h3>
+              <p className="text-xs opacity-90">Verified Architects</p>
+              <p className="text-[11px] mt-0.5 opacity-70">Joined in the last 2 weeks</p>
             </div>
-
-            {/* Card 2 */}
-            <div className='bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]'>
-              <h3 className='text-3xl font-normal mb-0.5'>2,500+</h3>
-              <p className='text-xs opacity-90'>Projects Posted</p>
-              <p className='text-[11px] mt-0.5 opacity-70'>Every month on Archireach</p>
+            <div className="bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-3 sm:px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-0.5">2,500+</h3>
+              <p className="text-xs opacity-90">Projects Posted</p>
+              <p className="text-[11px] mt-0.5 opacity-70">Every month on Archireach</p>
             </div>
-
-            {/* Card 3 */}
-            <div className='bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]'>
-              <h3 className='text-3xl font-normal mb-0.5'>95%</h3>
-              <p className='text-xs opacity-90'>Success Rate</p>
-              <p className='text-[11px] mt-0.5 opacity-70'>Projects completed successfully</p>
+            <div className="bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-3 sm:px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-0.5">95%</h3>
+              <p className="text-xs opacity-90">Success Rate</p>
+              <p className="text-[11px] mt-0.5 opacity-70">Projects completed successfully</p>
             </div>
-
-            {/* Card 4 */}
-            <div className='bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]'>
-              <h3 className='text-3xl font-normal mb-0.5'>24 hrs</h3>
-              <p className='text-xs opacity-90'>Average Lead Time</p>
-              <p className='text-[11px] mt-0.5 opacity-70'>Architects get qualified leads</p>
+            <div className="bg-white text-black border border-purple-200 hover:border-[rgb(122,107,235)] rounded-xl px-3 sm:px-4 py-3 flex flex-col items-center shadow-sm w-full max-w-[185px]">
+              <h3 className="text-2xl sm:text-3xl font-normal mb-0.5">24 hrs</h3>
+              <p className="text-xs opacity-90">Average Lead Time</p>
+              <p className="text-[11px] mt-0.5 opacity-70">Architects get qualified leads</p>
             </div>
           </div>
-
-
         </div>
       </div>
 
-
+      {/* FAQ */}
       <FAQAccordion />
 
-      <div className='bg-white py-10 sm:py-14 px-4'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+      {/* CTA Cards */}
+      <div className="bg-white py-10 sm:py-14 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
 
-            <div className='bg-white rounded-2xl border border-purple-100 shadow-sm p-6 sm:p-8'>
-              <div className='inline-flex items-center px-3 py-1 rounded-full border border-gray-200 text-[10px] tracking-[0.25em] font-extrabold text-gray-700'>
+            <div className="bg-white rounded-2xl border border-purple-100 shadow-sm p-6 sm:p-8">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-gray-200 text-[10px] tracking-[0.25em] font-extrabold text-gray-700">
                 ARCHITECTS
               </div>
-
-              <div className='mt-4 flex items-start gap-3'>
-                <CheckCircle className='w-7 h-7 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                <h3 className='text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 leading-tight'>
+              <div className="mt-4 flex items-start gap-3">
+                <CheckCircle className="w-6 sm:w-7 h-6 sm:h-7 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 leading-tight">
                   Ready to start your project?
                 </h3>
               </div>
-
-              <div className='mt-5 space-y-4 text-gray-700'>
-                <div className='flex items-start gap-3'>
-                  <Users className='w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                  <p className='text-sm leading-relaxed'>
+              <div className="mt-5 space-y-4 text-gray-600">
+                <div className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm leading-relaxed">
                     Find licensed, verified architects for your project in your city. Post your requirements once and get responses from the right professionals.
                   </p>
                 </div>
-
-                <div className='flex items-start gap-3'>
-                  <CheckCircle className='w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                  <p className='text-sm leading-relaxed'>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm leading-relaxed">
                     Join 500+ firms already hiring through Archireach.
                   </p>
                 </div>
               </div>
-
-              <div className='mt-7'>
+              <div className="mt-7">
                 <button
                   onClick={() => navigate('/signup')}
-                  className='w-full sm:w-auto px-7 py-3 rounded-full text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200 bg-[rgb(122,107,235)]'>
+                  className="w-full sm:w-auto px-7 py-3 rounded-full text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200 bg-[rgb(122,107,235)]"
+                >
                   Post a Project
                 </button>
               </div>
             </div>
 
-            <div className='bg-white rounded-2xl border border-purple-100 shadow-sm p-6 sm:p-8'>
-              <div className='inline-flex items-center px-3 py-1 rounded-full border border-gray-200 text-[10px] tracking-[0.25em] font-extrabold text-gray-700'>
+            <div className="bg-white rounded-2xl border border-purple-100 shadow-sm p-6 sm:p-8">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-gray-200 text-[10px] tracking-[0.25em] font-extrabold text-gray-700">
                 PROJECTS
               </div>
-
-              <div className='mt-4 flex items-start gap-3'>
-                <CheckCircle className='w-7 h-7 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                <h3 className='text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 leading-tight'>
+              <div className="mt-4 flex items-start gap-3">
+                <CheckCircle className="w-6 sm:w-7 h-6 sm:h-7 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 leading-tight">
                   Ready to grow your practice?
                 </h3>
               </div>
-
-              <div className='mt-5 space-y-4 text-gray-700'>
-                <div className='flex items-start gap-3'>
-                  <Users className='w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                  <p className='text-sm leading-relaxed'>
+              <div className="mt-5 space-y-4 text-gray-600">
+                <div className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm leading-relaxed">
                     Get matched with serious, pre-qualified clients and projects that fit your skills, location, and budget range. Build a steady pipeline of quality work.
                   </p>
                 </div>
-
-                <div className='flex items-start gap-3'>
-                  <CheckCircle className='w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5' />
-                  <p className='text-sm leading-relaxed'>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-[rgb(122,107,235)] flex-shrink-0 mt-0.5" />
+                  <p className="text-sm leading-relaxed">
                     Join 1,000+ architects already getting clients on Archireach.
                   </p>
                 </div>
               </div>
-
-              <div className='mt-7'>
+              <div className="mt-7">
                 <button
                   onClick={() => navigate('/signup')}
-                  className='w-full sm:w-auto px-7 py-3 rounded-full text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200 bg-[rgb(122,107,235)]'>
-                  Join as Architect - Start Free Trial
+                  className="w-full sm:w-auto px-7 py-3 rounded-full text-white font-semibold shadow-md hover:shadow-lg transition-all duration-200 bg-[rgb(122,107,235)]"
+                >
+                  Join as Architect — Start Free Trial
                 </button>
-                <p className='text-[11px] text-gray-500 mt-3'>
+                <p className="text-[11px] text-gray-500 mt-3">
                   3 months free. No credit card required. Cancel anytime.
                 </p>
               </div>
@@ -1634,37 +1578,31 @@ function LandingPage() {
         </div>
       </div>
 
-
-      {/* Join the ArchConnect Community Today + footer*/}
-
-      <div className="bg-white pt-0 pb-32">
+      {/* Community Banner + Footer */}
+      <div className="bg-white pt-0 pb-24 sm:pb-32">
         <div className="mt-0">
           <div className="relative bg-[rgba(162,142,245,0.4)] py-6 px-4 mx-auto max-w-5xl rounded-3xl">
-            {/* Main Content */}
-            <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-4">
-              <Reveal as="h1" delay={60} className="text-[32px] font-semibold text-black">
+            <div className="max-w-4xl mx-auto flex flex-col items-center text-center space-y-3 sm:space-y-4">
+              <Reveal as="h1" delay={60} className="text-[26px] sm:text-[32px] font-semibold text-black">
                 Join the Archireach Community Today
               </Reveal>
-              <p className="text-base text-black/70 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-base text-black/70 max-w-2xl leading-relaxed">
                 Connect with architects, find projects, and grow your practice with real opportunities in your city. Join our growing network of verified professionals.
               </p>
             </div>
-            {/* Button overlapping bottom edge */}
             <div className="static mt-6 flex justify-center md:absolute md:mt-0 md:bottom-[-20px] md:left-1/2 md:-translate-x-1/2">
               <button
                 onClick={() => navigate('/community')}
-                className="px-5 py-2.5 bg-[rgb(122,107,235)] text-white rounded-full font-semibold shadow-md hover:bg-[rgb(90,75,200)] transition-all duration-200 flex items-center space-x-2">
+                className="px-5 py-2.5 bg-[rgb(122,107,235)] text-white rounded-full font-semibold shadow-md hover:bg-[rgb(90,75,200)] transition-all duration-200 flex items-center space-x-2 text-sm sm:text-base"
+              >
                 Create Account
               </button>
-
             </div>
           </div>
         </div>
-
         <Footer />
       </div>
     </div>
-
   );
 }
 
